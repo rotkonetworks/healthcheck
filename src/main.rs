@@ -33,7 +33,7 @@ async fn main() {
 
     // Build our application with routes
     let app = Router::new()
-        .route("/health", get(health_check));
+        .route("/", get(health_check));
 
     // Run our application
     let addr = SocketAddr::from(([0, 0, 0, 0], 8090));
